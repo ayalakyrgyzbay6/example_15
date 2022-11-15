@@ -1,0 +1,57 @@
+
+#task2
+file = open('ex.txt','r')
+print(file.read())
+
+
+
+
+def file_read(file_path):
+    file = open(file_path, 'r')
+    print(file.read())
+    file.close()
+
+file_path="ex.txt"
+file_read(file_path)
+
+______________________________________________
+file=""
+def file_read(file):
+    file = open('ex.txt', 'r')
+    print(file.read())
+file_read(file)
+
+
+#task3
+file = open('ex.txt','r')
+print(file.readline())
+
+______________________________________________
+def file_read(file_path):
+        result =[x.strip() for x in file_path]
+
+        return result
+
+
+with open('ex.txt','r') as result:
+        content_list=result.readlines()
+        print(file_read(content_list))
+
+#task4
+def file_write(fullname_list):
+    with open('ex.txt','w') as full:
+        for ful in fullname_list:
+            full.write(ful+'\n')
+    with open('ex.txt','r') as full:
+        print(full.read())
+
+fullname_list = [
+'Andre Montgomery Jr.',
+'Natasha Rubio',
+'Emily Serrano',
+'Amber Nixon',
+'Leslie Gomez'
+]
+
+
+file_write(fullname_list)
